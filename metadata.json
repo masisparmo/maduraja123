@@ -1,0 +1,6 @@
+{
+  "name": "Madu Raja 650ml",
+  "description": "Landing page resmi Madu Raja 650ml — madu murni alami untuk imunitas keluarga dan energi harian. Harga promo Rp 75.000, terdaftar P-IRT & Halal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

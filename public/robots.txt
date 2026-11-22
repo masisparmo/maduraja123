@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Allow major AI / Search crawlers for AEO & GEO visibility
+User-agent: Googlebot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+Sitemap: /sitemap.xml
