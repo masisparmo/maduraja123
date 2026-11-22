@@ -99,14 +99,21 @@ function formatRupiah(amount) {
   });
 })();
 
-// 4. Zero-Broken-Image Fallback Handler
+// 4. Zero-Broken-Image Fallback Handler (also supports unbuilt GitHub Pages root)
 (function initProductImageFallback() {
-  const img = document.getElementById('hero-product-img');
+  const img = /** @type {HTMLImageElement | null} */ (
+    document.getElementById('hero-product-img')
+  );
   const fallback = document.getElementById('hero-img-fallback');
 
   if (!img || !fallback) return;
 
   img.addEventListener('error', () => {
+    if (!img.dataset.retriedPublic) {
+      img.dataset.retriedPublic = 'true';
+      img.src = './public/assets/aistudio/madu-raja-75000_16229aea.webp';
+      return;
+    }
     img.hidden = true;
     fallback.hidden = false;
   });
